@@ -23,6 +23,9 @@ Your job:
 4. Run `npx hyperframes lint` inside the composition directory and fix every error. Repeat until zero errors.
 
 Notes:
+- Vendor everything the render needs into the composition (fonts, GSAP or other runtimes, images, audio). If a CDN is blocked, get the library from npm (`npm pack <pkg>`) or ship a local font file. If a remote image cannot be fetched, recreate the visual in-composition and list it under `## Deviations from plan` with the file path to drop in later.
+- Lint warnings (for example `nested_structure_needs_subcomposition`) are acceptable; only errors block the gate. Split into sub-compositions only if the Hyperframes skill recommends it for this length.
+- Your scope ends at a lint-clean composition (also run `npx hyperframes check` if available and report it). Do not render; that is brag-deliverer's job.
 - `npx` needs network access. If it is blocked, stop and report the exact command that failed instead of guessing.
 - Never edit the user's project files outside the output directory.
 
