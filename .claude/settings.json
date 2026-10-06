@@ -1,0 +1,14 @@
+{
+  "enableAllProjectMcpServers": true,
+  "extraKnownMarketplaces": {
+    "omc": {
+      "source": {
+        "source": "github",
+        "repo": "Yeachan-Heo/oh-my-claudecode"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "oh-my-claudecode@omc": true
+  }
+}
