@@ -13,7 +13,7 @@ Skill files: the brag skill is installed at `~/.claude/skills/brag/` (or `.claud
 Read `references/step-4-deliver.md` before starting.
 
 Your job:
-1. In `<output-dir>/composition/` run `npx hyperframes lint`, `npx hyperframes validate`, and `npx hyperframes inspect`. Fix every error and every text overflow. Fix contrast below 3:1 (large text) / 4.5:1 (body); borderline 3:1-4:1 is acceptable.
+1. In `<output-dir>/composition/` run `npx hyperframes check` (lint + runtime validation + layout inspection; `validate`/`inspect` are deprecated aliases). Fix every error and every text overflow. Fix contrast below 3:1 (large text) / 4.5:1 (body); borderline 3:1-4:1 is acceptable.
 2. Write `<output-dir>/share-copy.txt`: one to three sentences, specific to the project, matched to the tone in brag-plan.md. Optional variants go to `share-copy-variants.md`, never into share-copy.txt.
 3. Rendering:
    - "render: approved" -> `npx hyperframes render --quality high --output ../brag.mp4`

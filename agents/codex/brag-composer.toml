@@ -17,7 +17,7 @@ Division of ownership:
 
 Your job:
 1. Write `<output-dir>/composition-brief.md` using the structure in step-3-compose.md.
-2. Create the composition in `<output-dir>/composition/` with Hyperframes. Use the project's real palette, fonts, verbatim copy, and assets. Copy chosen audio from the skill's `assets/` into the composition.
+2. Create the composition in `<output-dir>/composition/` with Hyperframes. Use the project's real palette, fonts, verbatim copy, and assets. Download remote images into the composition first; renders cannot rely on network URLs. Copy chosen audio from the skill's `assets/` into the composition.
 3. When music is used, run beat/cue detection as described in audio.md (`scripts/analyze_music_cues.py`) if no preset exists.
 4. Run `npx hyperframes lint` inside the composition directory and fix every error. Repeat until zero errors.
 

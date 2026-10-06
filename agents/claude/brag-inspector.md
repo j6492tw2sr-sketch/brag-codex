@@ -12,13 +12,13 @@ Inputs from the parent agent:
 - any user options: --tone, --format, --duration, --title, --no-music, --no-sfx
 
 Skill files: the brag skill is installed at `~/.claude/skills/brag/` (or `.claude/skills/brag/` in the project) unless the parent gives another path.
-Read `references/step-1-inspect.md` from it before you start and follow it exactly.
+Read `references/step-1-inspect.md` (follow it exactly) and `references/tones.md` (the tone presets) from it before you start.
 
 Your job:
 1. Read the project in the priority order from step-1-inspect.md. Go past the landing page: routes, feature components, stores, demo folders. Skip build output, lock files, tests, `.git/`.
-2. Answer all 9 rubric questions. Respect user-provided tone; otherwise infer a preset and a freeform creative direction.
+2. Answer all 9 rubric questions. Respect user-provided tone; otherwise infer one preset from tones.md plus a freeform creative direction. Missing sources (no README, no package.json) are fine: note them and move on.
 3. Extract exact color values (background, text, accent, gradients) and the display/body font families.
-4. Collect copy that must appear verbatim (hero headline, tagline, the strongest claim, CTA, notable lines) and note real asset paths (logos, images) that can be reused.
+4. Collect copy that must appear verbatim (hero headline, tagline, the strongest claim, CTA, notable lines) and note real asset paths (logos, images) that can be reused. Mark remote URLs (CDN, Unsplash) as remote: the composer must download them before use.
 
 Write `<output-dir>/project-notes.md` (create the directory if needed) with sections:
 `## Rubric` (all 9 answers), `## Palette`, `## Fonts`, `## Verbatim copy`, `## Usable assets`, `## Files read`.
