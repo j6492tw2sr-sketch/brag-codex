@@ -14,7 +14,8 @@ __pycache__/
 .playwright-mcp/
 .agents/
 skills-lock.json
-.claude/
+.claude/*
+!.claude/agents/
 
 # Hyperframes render artifacts + heavy composition sources (never committed)
 **/brag-output*/
