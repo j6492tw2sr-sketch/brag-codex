@@ -61,6 +61,21 @@ Generate the timestamp at the start of the run (`YYYY-MM-DD-HHmmss`) and use it 
 
 ---
 
+## Running with subagents (optional)
+
+If the `brag_inspector`, `brag_planner`, `brag_composer`, and `brag_deliverer` agents are installed (Codex: `brag_*`; Claude Code: `brag-*`), delegate each step to its agent instead of doing it inline. Pass every agent the project root, the chosen `<output-dir>`, and the parsed options. They hand off through files in `<output-dir>/`:
+
+| Step | Agent | Writes |
+|---|---|---|
+| 1 | inspector | `project-notes.md` |
+| 2 | planner | `brag-plan.md` |
+| 3 | composer | `composition-brief.md`, `composition/` |
+| 4 | deliverer | `share-copy.txt`, `brag.mp4` |
+
+Run them in order and check each step's gate before starting the next. The deliverer only renders when you pass `render: approved` or `render: draft`; otherwise run `npx hyperframes preview` yourself, show the user the URL, and call the deliverer again after they approve. Without the agents installed, follow the steps below directly.
+
+---
+
 ## Step 1: Inspect the project
 
 **Read:** [references/step-1-inspect.md](references/step-1-inspect.md)

@@ -53,6 +53,27 @@ npx hyperframes auth login
 npx hyperframes doctor
 ```
 
+## Agents (optional)
+
+`agents/` ships four subagents, one per pipeline step: inspector → planner → composer → deliverer. They hand off through files in `brag-output/`, keeping each step's context small. When they are installed, `/brag` delegates to them automatically.
+
+Codex:
+
+```bash
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/agents"
+cp agents/codex/*.toml "${CODEX_HOME:-$HOME/.codex}/agents/"
+```
+
+Claude Code (the skill and the agents):
+
+```bash
+mkdir -p ~/.claude/skills ~/.claude/agents
+rsync -a --exclude '.DS_Store' skills/brag/ ~/.claude/skills/brag/
+cp agents/claude/*.md ~/.claude/agents/
+```
+
+See [agents/README.md](agents/README.md) for what each agent does.
+
 ## Test
 
 Run the structural validator:
