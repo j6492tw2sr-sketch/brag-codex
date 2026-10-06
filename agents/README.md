@@ -14,4 +14,4 @@ Four subagents, one per `/brag` step. The same instructions ship in two formats:
 
 The orchestrating `/brag` skill runs them in order, checks each gate, and owns the user-facing preview/approval step. Each agent reads its step's reference from the installed brag skill, so the `skills/brag/references/` files stay the single source of truth.
 
-Keep both formats in sync when editing: the Claude files are the Codex `developer_instructions` with Claude paths (`~/.claude/skills/brag/`) and hyphenated names.
+`codex/*.toml` is the source of truth. After editing it, regenerate the Claude versions with `python3 agents/sync.py` (`--check` fails if they drift).
