@@ -21,5 +21,10 @@
     "context7@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(claude plugin:*)"
+    ]
   }
 }
